@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
-
+    <link href="https://fonts.cdnfonts.com/css/blanka" rel="stylesheet">
 
 
 <style>
@@ -137,23 +137,41 @@
 	  
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Venkat Jaswanth</a>
+	      <a class="navbar-brand mr-auto" href="index.html">Venkat Jaswanth</a>
 	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
+	      <div class="collapse navbar-collapse justify-content-end" id="ftco-nav">
 	        <ul class="navbar-nav nav ml-auto">
 	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
 	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
 	          <li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
-			  <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+			      <li class="nav-item"><a href="#experience-section" class="nav-link"><span>Experience</span></a></li>
+            <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Education</span></a ></li>
+            <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
 	          <li class="nav-item"><a href="#achievements-section" class="nav-link"><span>Achievements</span></a></li>
+            
 			  <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-	        </ul>
+	        
+      </ul>
 	      </div>
 	    </div>
 	  </nav>
+    <div id="mobileSidebar" class="mobile-sidebar">
+  <button class="close-btn" onclick="toggleSidebar()">&times;</button>
+  <ul class="mobile-nav-list">
+    <li><a href="#home-section" onclick="toggleSidebar()">Home</a></li>
+    <li><a href="#about-section" onclick="toggleSidebar()">About</a></li>
+    <li><a href="#skills-section" onclick="toggleSidebar()">Skills</a></li>
+    <li><a href="#experience-section" onclick="toggleSidebar()">Experience</a></li>
+    <li><a href="#resume-section" onclick="toggleSidebar()">Education</a></li>
+    <li><a href="#project-section" onclick="toggleSidebar()">Projects</a></li>
+    <li><a href="#achievements-section" onclick="toggleSidebar()">Achievements</a></li>
+    <li><a href="#contact-section" onclick="toggleSidebar()">Contact</a></li>
+  </ul>
+</div>
+<div id="sidebarOverlay" class="sidebar-overlay" onclick="toggleSidebar()"></div>
 	  <section id="home-section" class="hero">
 		  <div class="home-slider  owl-carousel">
 	       <div class="slider-item ">
@@ -719,5 +737,27 @@
     }, 2000); // 1.5s delay
   });
 </script>
-  </body>
+<div id="page-transition-overlay"></div>
+  <script>
+document.querySelectorAll('.navbar-nav .nav-link[href^="#"]').forEach(link => {
+  link.addEventListener('click', function(e) {
+    const targetId = this.getAttribute('href');
+    const target = document.querySelector(targetId);
+    if (target) {
+      e.preventDefault();
+      const overlay = document.getElementById('page-transition-overlay');
+      overlay.classList.add('active');
+      setTimeout(() => {
+        // Jump to the section after the slide
+        const yOffset = -70;
+        const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'auto' });
+        // Slide overlay out after a short delay
+        overlay.classList.remove('active');
+      }, 700); // match the CSS transition duration
+    }
+  });
+});
+</script>
+</body>
 </html>

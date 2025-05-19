@@ -19,6 +19,7 @@
   position: relative;
   border-radius: 20px;
   transition: box-shadow 0.3s, border 0.3s;
+  overflow: hidden;
 }
 .blog-entry::before {
   content: "";
@@ -28,14 +29,17 @@
   z-index: 0;
   pointer-events: none;
   background: linear-gradient(120deg, #00c6fb, #7f7fd5, #00c6fb);
-  background-size: 200% 200%;
   opacity: 0;
-  transition: opacity 0.3s, background-position 0.7s;
+  transition: opacity 0.3s, transform 0.35s;
+  transform: translateY(-40%);
 }
 .blog-entry:hover::before {
-  opacity: 0.38;
+  opacity: 0.4;
   background-position: 90% 0;
+  transform: translateY(100%);
+  transition: transform 5s, opacity 0.3s;
 }
+
 .blog-entry:hover .text,
 .blog-entry:hover .text * {
   color: #fff !important;
@@ -46,9 +50,11 @@
 }
 .blog-entry > * {
   position: relative;
-  z-index: 0;
+  z-index: 2;
+  transition: color 0.3s;
 }
-.btn.btn-primary:hover, .btn.btn-primary:focus {
+.btn.btn-prima  z-index: 2;
+  transition: color 0.3s;ry:hover, .btn.btn-primary:focus {
   /* Unique hover: scale up, glow, and animate gradient border faster */
   transform: scale(1.07) rotate(-1deg);
   box-shadow: 0 0 24px 6px rgba(0,198,251,0.25), 0 2px 12px 0 rgba(127,127,213,0.18);
@@ -10066,22 +10072,171 @@ textarea.form-control {
   box-shadow: 0 8px 32px 0 rgba(0,198,251,0.18), 0 1.5px 8px 0 rgba(127,127,213,0.13);
   /* Optional: add a subtle border for more separation */
   border-bottom: 2px solid #00c6fb22;
-  background: rgba(0,0,0,0.85); /* keeps navbar readable over shadow */
+  background: #000 !important; /* keeps navbar readable over shadow */
   backdrop-filter: blur(4px);
 }
-#ftco-navbar, .ftco_navbar {
-  box-shadow: 0 8px 32px 0 rgba(0,198,251,0.18), 0 1.5px 8px 0 rgba(127,127,213,0.13);
-  border-bottom: 2px solid #00c6fb22;
-  background: #000 !important;      /* Fully black background */
-  backdrop-filter: none !important; /* Remove blur effect */
-  z-index: 1002;                    /* Ensure navbar is above bubbles */
-}
+/* #ftco-navbar, .ftco_navbar {
+  /* box-shadow: 0 8px 32px 0 rgba(0,198,251,0.18), 0 1.5px 8px 0 rgba(127,127,213,0.13); */
+  /* border-bottom: 2px solid #00c6fb22; */
+  /* background: #000 !important;      Fully black background */
+  /* backdrop-filter: none !important; */
+   /* z-index: 1002;                    Ensure navbar is above bubbles */
+  
 
 
 /* Ensure bubbles (circles) are always behind the navbar */
 
 
-nav#ftco-navbar {
+.skill-card {
   position: relative;
-  z-index: 1002;
+  overflow: hidden;
+  /* ...existing code... */
+}
+
+.skill-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, #00c6fbcc 0%, #7f7fd5cc 100%);
+  opacity: 0;
+  transform: translateY(40%);
+  transition: opacity 0.35s, transform 0.35s;
+  z-index: 1;
+  pointer-events: none;
+  border-radius: 18px;
+}
+
+.skill-card:hover::before {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skill-card > * {
+  position: relative;
+  z-index: 2;
+  transition: color 0.3s;
+}
+
+h1.big.big-2 , h1.big{
+  font-family: 'Blanka', sans-serif;
+}
+/* add georgia */
+p,h1,h2{
+  font-family: 'Georgia', serif;
+
+}
+#page-transition-overlay {
+  position: fixed;
+  opacity: 0.2;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: linear-gradient(120deg, #00c6fb 30%, #7f7fd5 40%);
+  z-index: 9999;
+  pointer-events: none;
+  transform: translateX(-100vw);
+  transition: transform 0.2s cubic-bezier(0.77,0,0.18,1);
+}
+#page-transition-overlay.active {
+  pointer-events: all;
+  transform: translateX(100%);
+}
+
+.navbar .container, .navbar {
+  flex-wrap: nowrap !important;
+}
+.navbar-nav {
+  flex-wrap: nowrap !important;
+}
+.navbar .container {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: center;
+}
+.navbar-brand {
+  margin-right: auto !important;
+  white-space: nowrap;
+}
+
+.mobile-sidebar {
+  position: fixed;
+  top: 0; left: -260px;
+  width: 240px;
+  height: 100vh;
+  background: #111;
+  z-index: 20000;
+  transition: left 0.3s cubic-bezier(0.4,0,0.2,1);
+  box-shadow: 2px 0 24px 0 #00c6fb33;
+  padding-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.mobile-sidebar.open {
+  left: 0;
+}
+.mobile-sidebar .close-btn {
+  position: absolute;
+  top: 10px; right: 16px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.mobile-nav-list {
+  list-style: none;
+  padding: 0 0 0 1.2rem;
+  margin: 0;
+}
+.mobile-nav-list li {
+  margin: 1.2rem 0;
+}
+.mobile-nav-list a {
+  color: #00c6fb;
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.mobile-nav-list a:hover {
+  color: #7f7fd5;
+}
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.3);
+  z-index: 19999;
+}
+.sidebar-overlay.open {
+  display: block;
+}
+
+/* Hide default navbar on small screens, show sidebar toggle */
+@media (max-width: 991.98px) {
+  #ftco-navbar, .ftco_navbar {
+    display: none !important;
+  }
+  .sidebar-toggle-btn {
+    display: block !important;
+  }
+}
+
+/* Show default navbar on desktop, hide sidebar toggle */
+@media (min-width: 992px) {
+  .mobile-sidebar, .sidebar-overlay, .sidebar-toggle-btn {
+    display: none !important;
+  }
+}
+.sidebar-toggle-btn {
+  display: none;
+  position: fixed;
+  top: 18px; left: 18px;
+  z-index: 20001;
+  background: #111;
+  color: #00c6fb;
+  border: none;
+  font-size: 2rem;
+  border-radius: 6px;
+  padding: 4px 12px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #00c6fb33;
 }
