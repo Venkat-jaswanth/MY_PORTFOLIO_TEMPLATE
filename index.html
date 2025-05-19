@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Venkat Jaswanth Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+.about-img img,
+.img-about img,
+.rounded-circle {
+  aspect-ratio: 1 / 1;
+  scale:1.3;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  max-width: 220px; /* or whatever size you prefer */
+  display: block;
+  border-radius: 17% !important;
+  box-shadow: 0 8px 32px 0 rgb(0, 197, 251), 0 1.5px 8px 0 rgba(127,127,213,0.18);
+  border : 2px solid #1592e6ea
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+		<ul class="circles">
+							<li></li><li></li><li></li><li></li><li></li>
+							<li></li><li></li><li></li><li></li><li></li>
+						</ul>
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Venkat Jaswanth</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
+			  <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#achievements-section" class="nav-link"><span>Achievements</span></a></li>
+			  <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+					
+					<div class="text">
+		          		<span class="subheading">Hello!</span>
+							<h1 class="mb-4 mt-3">I'm <span style="white-space: nowrap;">Venkat Jaswanth</span></h1>
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'JAVA ',
+						'Competetive Programmer  ',
+						'Flutter '
+						
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <!-- <h2>A JAVA Developer</h2> -->
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p>
+							<a href="#project-section" class="btn btn-primary py-3 px-3">My works</a></p>
+							
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<ul class="circles">
+							<li></li><li></li><li></li><li></li><li></li>
+							<li></li><li></li><li></li><li></li><li></li>
+						</ul>
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/profile.JPG" class="img-fluid rounded-circle b-shadow-a" alt="" style="">									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-about-info6 col-md-7">
+									  <div class="" style="margin-left: 25px;">
+										<p><span class="title-s">Name: </span> <span>Venkat Jaswanth</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Full Stack Developer</span></p>
+										<p><span class="title-s">Address: </span> <span>Nellore, Andhra Pradesh</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf" style="margin-top: 60px;">
+									<p class="title-s">Skills</p>
+									<span>JAVA</span> 
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width:80%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Hibernate</span> 
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="5" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Spring Core & Spring boot</span> 
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>MySql</span> 
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Flutter </span> 
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>This is about</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Full Stack Developer</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Telugu</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>Cloud , Docker , Git</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Photography,  Competetive Programming</span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<!-- <p class="mb-4">
+									<span class="number" data-number="30">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p> -->
+								<p><a href="https://www.linkedin.com/in/i-v-j" class="btn btn-primary py-3 px-3">LinkedIn</a> <a href="https://leetcode.com/u/hxrdcoder21/" class="btn btn-primary py-3 px-3">LeetCode</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+<!-- Skills Section -->
+<section class="ftco-section" id="skills-section">
+	<ul class="circles">
+							<li></li><li></li><li></li><li></li><li></li>
+							<li></li><li></li><li></li><li></li><li></li>
+						</ul>
+  <div class="container position-relative">
+    <div class="row justify-content-center mb-5 pb-3">
+      <div class="col-12 heading-section text-center ftco-animate position-relative">
+        <h1 class="big big-2">Skills</h1>
+        <h2 class="mb-4">My Skills</h2>
+        <p>Technologies and tools I work with</p>
+      </div>
+    </div>
+
+    <!-- Group 1: Languages -->
+    <h3 class="skills-group-title">Languages</h3>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-img-wrap">
+          <img src="images/python.jpg" alt="Python" class="skill-img">
+        </div>
+        <div class="skill-name">Python</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-img-wrap">
+          <img src="images/java.jpg" alt="Java" class="skill-img">
+        </div>
+        <div class="skill-name">Java</div>
+      </div>
+      <!-- Add more language skills -->
+    </div>
+
+    <!-- Group 2: Frameworks -->
+    <h3 class="skills-group-title">Frameworks</h3>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-img-wrap">
+          <img src="images/react.jpg" alt="React" class="skill-img">
+        </div>
+        <div class="skill-name">React</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-img-wrap">
+          <img src="images/flutter.jpg" alt="Flutter" class="skill-img">
+        </div>
+        <div class="skill-name">Flutter</div>
+      </div>
+      <!-- Add more framework skills -->
+    </div>
+
+    <!-- Group 3: Tools -->
+    <h3 class="skills-group-title">Tools</h3>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-img-wrap">
+          <img src="images/git.jpg" alt="Git" class="skill-img">
+        </div>
+        <div class="skill-name">Git</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-img-wrap">
+          <img src="images/docker.jpg" alt="Docker" class="skill-img">
+        </div>
+        <div class="skill-name">Docker</div>
+      </div>
+      <!-- Add more tool skills -->
+    </div>
+  </div>
+</section>
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+		<br>
+		<br>
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2023-2027</span>
+    					<h2>Bachelor of Engineering </h2>
+    					<span class="position">Indian Institute of Information Technology, Kottayam</span>
+    					<p class="mt-4">SGPA: 7.4</p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2021-2023</span>
+    					<h2>Higher Secondary School</h2>
+    					<span class="position">Krishna Chaintanya Junior College, &nbsp &nbsp Nellore  </span>
+    					<p class="mt-4">Percentage: 97.6%.</p>
+    				</div>
+				</div>
+    		</div>
+
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+		<ul class="circles">
+							<li></li><li></li><li></li><li></li><li></li>
+							<li></li><li></li><li></li><li></li><li></li>
+						</ul>
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are the projects on {fill here in future} </p>
+          </div>
+        </div>
+        <div class="row d-flex">
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="" class="block-20 zoom-effect" style="background-image: url('images/project1.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="">Project 1 name</a></h3>
+				  <p>
+					Project 1 description...............................................................
+				  </p>
+				</div>
+			  </div>
+			</div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="" class="block-20 zoom-effect" style="background-image: url('images/project2.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/spector-0110/EcoWaste">Project 2</a></h3>
+				<p>
+					Project 2 description...............................................................
+				</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="" class="block-20 zoom-effect" style="background-image: url('project3.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="">Project 3</a></h3>
+				Project 3 description...............................................................
+					
+					
+				
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+	  </div>
+    </section>
+
+	<section class="ftco-section" id="achievements-section">
+  <div class="container">
+	<ul class="circles">
+							<li></li><li></li><li></li><li></li><li></li>
+							<li></li><li></li><li></li><li></li><li></li>
+						</ul>
+    <div class="row justify-content-center mb-5 pb-5">
+      <div class="col-12 heading-section text-center ftco-animate position-relative">
+		<h1 class="big big-2" >Achievements</h1>
+		<h2 class="mb-4">Achievements</h2>
+        <p>Some of my notable achievements and recognitions.</p>
+      </div>
+    </div>
+    <div class="row d-flex">
+      <div class="col-md-4 d-flex ftco-animate">
+        <div class="blog-entry justify-content-end">
+          <a href="#" class="block-20 zoom-effect" style="background-image: url('images/achi_1.jpg');"></a>
+          <div class="text mt-3 float-right d-block">
+            <h3 class="heading"><a href="#">Achi 1</a></h3>
+            <p>Description........................................... .........................................</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 d-flex ftco-animate">
+        <div class="blog-entry justify-content-end">
+          <a href="#" class="block-20 zoom-effect" style="background-image: url('images/achi_leetcode.jpg');"></a>
+          <div class="text mt-3 float-right d-block">
+            <h3 class="heading"><a href="#">Leetcode knight</a></h3>
+            <p>Solved over 500 problems on LeetCode, demonstrating strong problem-solving and coding skills.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 d-flex ftco-animate">
+        <div class="blog-entry">
+          <a href="#" class="block-20 zoom-effect" style="background-image: url('images/achi_3.jpg');"></a>
+          <div class="text mt-3 float-right d-block">
+            <h3 class="heading"><a href="#">Achi 2</a></h3>
+            <p>Description.......................................................... ..........................</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+  </div>
+</section>
+
+
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<ul class="circles">
+							<li></li><li></li><li></li><li></li><li></li>
+							<li></li><li></li><li></li><li></li><li></li>
+						</ul>
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="12">0</strong>
+                <span>Number of hackthons attended </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="5">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>Projects on<span> Github  </span> </h2>
+						<div class="heading"> <h4> I love to solve problems. </h4>
+						<br>
+						<p><a href="https://github.com/spector-0110" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Nellore, Andhra Pradesh </h3>
+	          </div>
+          </div>
+		  <a href="tel://7850840336"> <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">+91 8825661837</h3>
+	          </div></a>
+          </div>
+          <a href="mailto:indupuruvenkatjaswanth@gmail.com"><div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+	            <h3 class="mb-4">Email Address</h3>
+	          </div>
+          </div></a>
+          <a href="resumeL.pdf" target="_blank"><div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+	            <h3 class="mb-4">Download Resume</h3>
+	          </div></a>
+          </div>
+
+		  <div class="container">
+			<br>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/i_v_j/"><span class="icon-linkedin"></span></a></li>  
+					  <li class="ftco-animate"><a href="https://github.com/Venkat-jaswanth"><span class="icon-github"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+  <script src="js/glitter-cursor.js"></script>
+  <script src="js/typed.js"></script>
+  <script src="js/bg-canva.js"></script>
+  </div>
+  </body>
+</html>
