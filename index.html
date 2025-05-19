@@ -129,7 +129,8 @@
 
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-		<ul class="circles">
+		<button class="sidebar-toggle-btn" onclick="toggleSidebar()">&#9776;</button>
+    <ul class="circles">
 							<li></li><li></li><li></li><li></li><li></li>
 							<li></li><li></li><li></li><li></li><li></li>
 						</ul>
@@ -758,6 +759,12 @@ document.querySelectorAll('.navbar-nav .nav-link[href^="#"]').forEach(link => {
     }
   });
 });
+</script>
+<script>
+function toggleSidebar() {
+  document.getElementById('mobileSidebar').classList.toggle('open');
+  document.getElementById('sidebarOverlay').classList.toggle('open');
+}
 </script>
 </body>
 </html>

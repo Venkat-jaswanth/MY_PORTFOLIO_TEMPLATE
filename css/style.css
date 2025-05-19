@@ -10155,7 +10155,6 @@ p,h1,h2{
   margin-right: auto !important;
   white-space: nowrap;
 }
-
 .mobile-sidebar {
   position: fixed;
   top: 0; left: -260px;
@@ -10210,7 +10209,7 @@ p,h1,h2{
   display: block;
 }
 
-/* Hide default navbar on small screens, show sidebar toggle */
+/* Hide default navbar and show sidebar toggle only on small screens */
 @media (max-width: 991.98px) {
   #ftco-navbar, .ftco_navbar {
     display: none !important;
@@ -10220,7 +10219,7 @@ p,h1,h2{
   }
 }
 
-/* Show default navbar on desktop, hide sidebar toggle */
+/* Show default navbar and hide sidebar toggle on desktop */
 @media (min-width: 992px) {
   .mobile-sidebar, .sidebar-overlay, .sidebar-toggle-btn {
     display: none !important;
@@ -10240,3 +10239,139 @@ p,h1,h2{
   cursor: pointer;
   box-shadow: 0 2px 8px #00c6fb33;
 }
+/* Custom sidebar: glowing text, acrylic blurry background, spacing for icon */
+.mobile-sidebar {
+  position: fixed;
+  top: 0; left: -260px;
+  width: 240px;
+  height: 100vh;
+  background: rgba(17, 17, 34, 0.75);
+  backdrop-filter: blur(16px) saturate(180%);
+  z-index: 20000;
+  transition: left 0.3s cubic-bezier(0.4,0,0.2,1);
+  box-shadow: 2px 0 24px 0 #00c6fb33;
+  padding-top: 4.5rem; /* More space for icon */
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-sidebar.open {
+  left: 0;
+}
+
+.mobile-sidebar .close-btn {
+  position: absolute;
+  top: 10px; right: 16px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.mobile-nav-list {
+  list-style: none;
+  padding: 0 0 0 1.2rem;
+  margin: 0;
+}
+
+.mobile-nav-list li {
+  margin: 1.7rem 0; /* More vertical space between items */
+}
+
+.mobile-nav-list a {
+  color: #00c6fb;
+  font-size: 1.25rem;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow:
+    0 0 8px #00c6fb,
+    0 0 16px #7f7fd5,
+    0 0 2px #fff;
+  transition: color 0.2s, text-shadow 0.2s;
+  display: inline-block;
+}
+
+.mobile-nav-list a:hover {
+  color: #fff;
+  text-shadow:
+    0 0 16px #00c6fb,
+    0 0 32px #7f7fd5,
+    0 0 8px #fff;
+}
+
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.3);
+  z-index: 19999;
+}
+.sidebar-overlay.open {
+  display: block;
+}
+
+/* Hide default navbar and show sidebar toggle only on small screens */
+@media (max-width: 991.98px) {
+  #ftco-navbar, .ftco_navbar {
+    display: none !important;
+  }
+  .sidebar-toggle-btn {
+    display: block !important;
+  }
+}
+
+/* Show default navbar and hide sidebar toggle on desktop */
+@media (min-width: 992px) {
+  .mobile-sidebar, .sidebar-overlay, .sidebar-toggle-btn {
+    display: none !important;
+  }
+}
+.sidebar-toggle-btn {
+  display: none;
+  position: fixed;
+  top: 18px; left: 18px;
+  z-index: 20001;
+  background: #111;
+  color: #00c6fb;
+  border: none;
+  font-size: 2rem;
+  border-radius: 6px;
+  padding: 4px 12px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #00c6fb33;
+}
+
+@media (max-width: 767.98px) {
+  .about-mf .row.d-flex.align-items-stretch {
+    flex-direction: column !important;
+  }
+  .about-mf .col-md-6,
+  .about-mf .col-lg-5,
+  .about-mf .col-lg-7,
+  .about-mf .col-md-7 {
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .about-img {
+    margin: 0 auto 1.5rem auto !important;
+    display: flex;
+    justify-content: center;
+  }
+  .about-mf .about-img img {
+    margin-left: 0 !important;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .about-img {
+    margin-bottom: 4rem !important;
+  }
+}
+
