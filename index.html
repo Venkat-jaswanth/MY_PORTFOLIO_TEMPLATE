@@ -393,6 +393,10 @@
 
 <section class="ftco-section" id="experience-section">
   <div class="container">
+			<ul class="circles">
+							<li></li><li></li><li></li><li></li><li></li>
+							<li></li><li></li><li></li><li></li><li></li>
+						</ul>
     <div class="row justify-content-center mb-5 pb-3">
       <div class="col-12 heading-section text-center ftco-animate position-relative">
         <h1 class="big big-2">Experience</h1>
@@ -705,5 +709,15 @@
   <script src="js/typed.js"></script>
   <script src="js/bg-canva.js"></script>
   </div>
+  <script>
+  // Show all bubbles after 1.5 seconds
+  window.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+      document.querySelectorAll('.circles').forEach(function(el) {
+        el.style.visibility = 'visible';
+      });
+    }, 2000); // 1.5s delay
+  });
+</script>
   </body>
 </html>

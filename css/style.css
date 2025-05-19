@@ -9898,11 +9898,12 @@ textarea.form-control {
 
 /* container for the circles */
 .circles {
+  visibility: hidden;
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
   margin: 0; padding: 0;
   list-style: none;
-  z-index: 0;
+  z-index: 0 !important;
 }
 
 /* each circle */
@@ -10067,4 +10068,20 @@ textarea.form-control {
   border-bottom: 2px solid #00c6fb22;
   background: rgba(0,0,0,0.85); /* keeps navbar readable over shadow */
   backdrop-filter: blur(4px);
+}
+#ftco-navbar, .ftco_navbar {
+  box-shadow: 0 8px 32px 0 rgba(0,198,251,0.18), 0 1.5px 8px 0 rgba(127,127,213,0.13);
+  border-bottom: 2px solid #00c6fb22;
+  background: #000 !important;      /* Fully black background */
+  backdrop-filter: none !important; /* Remove blur effect */
+  z-index: 1002;                    /* Ensure navbar is above bubbles */
+}
+
+
+/* Ensure bubbles (circles) are always behind the navbar */
+
+
+nav#ftco-navbar {
+  position: relative;
+  z-index: 1002;
 }
